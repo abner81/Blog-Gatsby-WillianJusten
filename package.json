@@ -17,14 +17,17 @@
     "gatsby-plugin-react-helmet": "^3.3.6",
     "gatsby-plugin-sharp": "^2.6.14",
     "gatsby-plugin-styled-components": "^3.3.10",
+    "gatsby-plugin-transition-link": "^1.20.2",
     "gatsby-prismjs-dracula": "^0.1.15",
     "gatsby-remark-images": "^3.3.19",
     "gatsby-remark-lazy-load": "^1.0.2",
     "gatsby-remark-prismjs": "^3.5.10",
     "gatsby-remark-relative-images": "^0.3.0",
-    "gatsby-source-filesystem": "^2.3.14",
+    "gatsby-source-filesystem": "^2.0.42",
     "gatsby-transformer-remark": "^2.8.25",
     "gatsby-transformer-sharp": "^2.5.7",
+    "gsap": "^3.4.2",
+    "ink": "^2.7.1",
     "lazysizes": "^5.2.2",
     "prismjs": "^1.20.0",
     "prop-types": "^15.7.2",
@@ -34,7 +37,8 @@
     "react-helmet": "^6.1.0",
     "react-instantsearch-dom": "^6.7.0",
     "styled-components": "^5.1.1",
-    "styled-icons": "^10.6.0"
+    "styled-icons": "^10.6.0",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "prettier": "2.0.5"
@@ -47,6 +51,7 @@
     "build": "gatsby build",
     "developer": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
     "develop": "gatsby develop",
+    "dev-m": "gatsby develop -H 0.0.0.0 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",

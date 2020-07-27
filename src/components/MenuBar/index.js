@@ -8,6 +8,8 @@ import { ListUl } from "@styled-icons/boxicons-regular/ListUl"
 import { LightBulb } from "@styled-icons/octicons/LightBulb"
 import { UpArrowAlt } from "@styled-icons/boxicons-regular/UpArrowAlt"
 
+import getThemeColor from "../../../utils/getThemeColor"
+
 const MenuBar = () => {
 
   const [theme, setTheme] = useState(null)
@@ -29,13 +31,27 @@ const MenuBar = () => {
   return (
     <S.MenuBarWrapper>
       <S.MenuBarGroup>
-        <S.MenuBarLink to="/" title="Voltar para Home">
+        <S.MenuBarLink
+          cover
+          direction="down"
+          bg={getThemeColor()}
+          duration={0.6}
+          to="/"
+          title="Voltar para Home"
+        >
           <S.MenuBarItem>
             <Home />
           </S.MenuBarItem>
         </S.MenuBarLink>
 
-        <S.MenuBarLink to="/search/" title="Pesquisar">
+        <S.MenuBarLink
+          cover
+          direction="up"
+          bg={getThemeColor()}
+          duration={0.6}
+          to="/search/"
+          title="Pesquisar"
+        >
           <S.MenuBarItem>
             <SearchAlt2 />
           </S.MenuBarItem>
@@ -56,8 +72,9 @@ const MenuBar = () => {
           onClick={() => {
             window.__setPreferredDisplay(isListMode ? "grid" : "list")
           }}
+          className="display"
         >
-         { isListMode ? <Grid /> : <ListUl />}
+          {isListMode ? <Grid /> : <ListUl />}
         </S.MenuBarItem>
 
         <S.MenuBarItem title="Ir para o topo">
