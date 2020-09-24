@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from "react"
+import React, { useState, useEffect } from "react"
 import * as S from "./styled"
 
 import { Home } from "@styled-icons/boxicons-solid/Home"
@@ -11,12 +11,11 @@ import { UpArrowAlt } from "@styled-icons/boxicons-regular/UpArrowAlt"
 import getThemeColor from "../../../utils/getThemeColor"
 
 const MenuBar = () => {
-
   const [theme, setTheme] = useState(null)
   const [display, setDisplay] = useState(null)
 
-  const isDarkMode = theme === 'dark'
-  const isListMode = display === 'list'
+  const isDarkMode = theme === "dark"
+  const isListMode = display === "list"
   console.log(isListMode)
 
   useEffect(() => {
@@ -25,8 +24,11 @@ const MenuBar = () => {
 
     window.__onThemeChange = () => setTheme(window.__theme)
     window.__onDisplayChange = () => setDisplay(window.__display)
-    
   }, [])
+
+  const handleBackToTop = () => {
+    window.scrollTo(0, 0)
+  }
 
   return (
     <S.MenuBarWrapper>
@@ -77,7 +79,12 @@ const MenuBar = () => {
           {isListMode ? <Grid /> : <ListUl />}
         </S.MenuBarItem>
 
-        <S.MenuBarItem title="Ir para o topo">
+        <S.MenuBarItem
+          title="Ir para o topo"
+          className="subir"
+          href="#"
+          onClick={handleBackToTop}
+        >
           <UpArrowAlt />
         </S.MenuBarItem>
       </S.MenuBarGroup>

@@ -40,14 +40,14 @@ export const MenuBarGroup = styled.div`
 `
 
 export const MenuBarLink = styled(AniLink)`
-         display: block;
+  display: block;
 
-         &.active {
-           span {
-             color: var(--highlight);
-           }
-         }
-       `
+  &.active {
+    span {
+      color: var(--highlight);
+    }
+  }
+`
 
 export const MenuBarItem = styled.span`
   color: var(--texts);
@@ -57,6 +57,9 @@ export const MenuBarItem = styled.span`
   padding: 1.1rem;
   width: 3.75rem;
   position: relative;
+
+    transition: 5s;
+  
 
   &:hover {
     color: var(--highlight);
